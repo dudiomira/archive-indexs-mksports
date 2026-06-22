@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>再访 · 英超直播 · 产品说明</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #fafafa;
+      color: #1e1e1e;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      width: 100%;
+    }
+    /* header / hero */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+      color: #121212;
+    }
+    .hero .subhead {
+      font-size: 1rem;
+      color: #6b6b6b;
+      font-weight: 350;
+      margin-top: 0.4rem;
+    }
+    .hero .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      background: #eaeaea;
+      padding: 0.2rem 0.7rem;
+      border-radius: 3px;
+      color: #3a3a3a;
+      margin-top: 0.8rem;
+    }
+    /* 章节 */
+    section {
+      margin-bottom: 2.6rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      border-left: 3px solid #d4d4d4;
+      padding-left: 0.75rem;
+      margin-bottom: 1rem;
+      color: #1e1e1e;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      font-weight: 350;
+      color: #2c2c2c;
+    }
+    a {
+      color: #1e3a5d;
+      text-decoration: none;
+      border-bottom: 1px solid #b6c9db;
+      transition: border-color 0.15s, color 0.15s;
+      font-weight: 400;
+    }
+    a:hover {
+      border-bottom-color: #1e3a5d;
+      color: #0b1a2b;
+    }
+    /* 卡片区 — 亮点 / 场景 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .feature-card {
+      flex: 1 1 170px;
+      background: #ffffff;
+      border: 1px solid #e4e4e4;
+      border-radius: 10px;
+      padding: 1.2rem 1rem 1rem;
+      transition: box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .feature-card .icon {
+      font-size: 1.6rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      opacity: 0.8;
+    }
+    .feature-card h3 {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: #1c1c1c;
+    }
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #4f4f4f;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+    /* 使用建议 — 小提示列表 */
+    .tip-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.2rem 0 0.2rem;
+    }
+    .tip-list li {
+      position: relative;
+      padding-left: 1.3rem;
+      margin-bottom: 0.8rem;
+      font-weight: 350;
+      color: #333;
+    }
+    .tip-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #8b8b8b;
+      font-weight: 700;
+    }
+    /* FAQ 摘要 */
+    .faq-item {
+      margin-bottom: 1.3rem;
+      border-bottom: 1px dashed #dcdcdc;
+      padding-bottom: 0.9rem;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 450;
+      font-size: 0.98rem;
+      color: #1c1c1c;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      font-size: 0.95rem;
+      color: #505050;
+      margin: 0.2rem 0 0 0;
+      line-height: 1.6;
+    }
+    .faq-a a {
+      font-weight: 400;
+    }
+    /* 可信说明 — 小字 */
+    .note-muted {
+      font-size: 0.85rem;
+      color: #727272;
+      border-top: 1px solid #eaeaea;
+      padding-top: 1.5rem;
+      margin-top: 2.2rem;
+      line-height: 1.6;
+    }
+    .note-muted a {
+      color: #4f5b68;
+      border-bottom: 1px solid #cbd5e0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #eaeaea;
+      margin: 0.5rem 0 2rem;
+    }
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .container { padding: 1.8rem 1rem 2.5rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .feature-grid { flex-direction: column; }
+      .feature-card { flex: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- hero / 再次访问 -->
+    <header class="hero">
+      <h1>再次回到这里</h1>
+      <div class="subhead">一段关于持续关注的简短说明</div>
+      <span class="badge">产品说明 · 2025</span>
+    </header>
+
+    <!-- 摘要：从再访说起 -->
+    <section>
+      <p>有些页面打开一次便不再回来，但<strong>英超直播</strong>更像一个你会在赛季中反复想起的角落。收藏夹里的链接、浏览器历史记录里自然浮现的地址——它的价值不在第一次抵达时的惊艳，而在每次需要时都能稳定出现。这不是一个需要刻意记忆的入口，而是当你再次打开时，发现它还在那里。</p>
+    </section>
+
+    <!-- 亮点：为什么值得保留 -->
+    <section>
+      <h2>几个值得留意的特点</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>稳定优先</h3>
+          <p>无论赛季中期还是国际比赛日间隙，服务状态始终透明。你可以随时确认可用性，无需猜测。</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📋</div>
+          <h3>低噪界面</h3>
+          <p>内容呈现直接，不堆砌无关弹窗与广告。关注比赛本身，而不是页面上的闪烁元素。</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔖</div>
+          <h3>便于回访</h3>
+          <p>结构固定、命名清晰，收藏后不易迷失。即使隔了几周，再打开仍然认得。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用建议：场景与习惯 -->
+    <section>
+      <h2>使用建议 · 适合什么样的场景</h2>
+      <p>如果你习惯在周末下午打开直播页面，或许会发现下面这些方式比较自然：</p>
+      <ul class="tip-list">
+        <li><strong>赛前几分钟</strong> — 直接通过书签或历史记录进入，页面加载轻快，不必经过多层跳转。</li>
+        <li><strong>同时关注多场</strong> — 可以备一个浏览器标签组，将 <a href="https://new-yingchao.com">英超直播</a> 固定为其中一个标签，随时切换。</li>
+        <li><strong>赛后回顾</strong> — 比赛结束后的页面状态变化清晰，不会出现误导性残留信息。</li>
+        <li><strong>移动端浏览</strong> — 在手机浏览器上同样保留窄正文与简洁布局，适应小屏幕阅读习惯。</li>
+      </ul>
+    </section>
+
+    <!-- FAQ 摘要（克制且真实） -->
+    <section>
+      <h2>一些简短问答</h2>
+      <div class="faq-item">
+        <div class="faq-q">这个页面适合长期收藏吗？</div>
+        <div class="faq-a">是的。只要赛季进行，链接结构保持稳定。你可以在任何浏览器设备上将 <a href="https://new-yingchao.com">英超直播</a> 加入书签，回访时体验一致。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">是否需要注册或安装额外软件？</div>
+        <div class="faq-a">不需要。该页面为直接访问设计，不强制注册、不要求下载额外插件。打开浏览器即可使用。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">页面有时候无法加载怎么办？</div>
+        <div class="faq-a">偶尔的网络波动或维护状态可能导致短暂不可用。建议稍后再试，或检查本地网络。我们不会虚假承诺“永久可用”，但多数时间保持正常。</div>
+      </div>
+    </section>
+
+    <!-- 可信但克制的访问说明 -->
+    <div class="note-muted">
+      <p><strong>关于访问说明</strong> · 本页仅对 <a href="https://new-yingchao.com">英超直播</a> 进行基于当前状态的介绍，不包含任何资源下载、会员诱导或第三方推广。页面内容可能随服务调整而发生变化，建议以实际访问为准。如果你是通过收藏再次回到这里，或许已经发现：越是简单的页面，越值得保留。</p>
+    </div>
+  </div>
+</body>
+</html>
