@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次回到英超直播 · 故事页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf8f5;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            color: #2c2c2c;
+            line-height: 1.75;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 760px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 540px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 2rem 1.5rem;
+                border-radius: 12px;
+            }
+        }
+
+        /* 开场短句 */
+        .opening {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #3a3a3a;
+            letter-spacing: 0.02em;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eae5de;
+            font-style: italic;
+        }
+
+        .opening span {
+            background: #f3efe8;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        /* 正文段落 */
+        p {
+            margin-bottom: 1.4rem;
+            font-size: 1.05rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        p.lead {
+            font-size: 1.15rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 引用 / 提示框 */
+        .story-note {
+            background: #f6f2ec;
+            border-left: 5px solid #b99a7b;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 1rem;
+            color: #3d362e;
+            font-style: normal;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .story-note strong {
+            font-weight: 600;
+            color: #5e4b36;
+        }
+
+        /* 特点列表 — 更像随笔短记 */
+        .virtues {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .virtues li {
+            background: #fbf9f6;
+            padding: 0.9rem 1.2rem 0.9rem 1.8rem;
+            border-radius: 40px 12px 12px 40px;
+            font-size: 1.02rem;
+            border: 1px solid #eae3da;
+            position: relative;
+            color: #3d3a35;
+        }
+
+        .virtues li::before {
+            content: "·";
+            position: absolute;
+            left: 0.8rem;
+            color: #b99a7b;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1;
+            top: 0.1rem;
+        }
+
+        /* 温和结尾 */
+        .gentle-close {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #eae5de;
+            font-size: 1rem;
+            color: #5b534a;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .gentle-close .sign {
+            font-style: italic;
+            color: #7a6b5c;
+            letter-spacing: 1px;
+        }
+
+        a {
+            color: #8c6f55;
+            text-decoration: none;
+            border-bottom: 1px dotted #cebcab;
+            transition: border 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            border-bottom: 2px solid #8c6f55;
+            color: #5e4b36;
+        }
+
+        /* 收藏小提示（模仿手写感） */
+        .bookmark-tip {
+            background: #fcf9f5;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            font-size: 0.95rem;
+            margin: 0.5rem 0 0.2rem;
+            border: 1px solid #e0d6cb;
+            color: #554b40;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eae5de;
+            margin: 1.8rem 0;
+        }
+
+        .faq-mini {
+            margin: 1.6rem 0 0.8rem;
+            background: #f9f6f0;
+            padding: 1.2rem 1.6rem;
+            border-radius: 16px;
+        }
+
+        .faq-mini p {
+            margin-bottom: 0.6rem;
+            font-size: 0.98rem;
+        }
+
+        .faq-mini .q {
+            font-weight: 600;
+            color: #5e4b36;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <div class="opening">
+        <span>又是周末，</span> 指尖不自觉地点开了那个熟悉的标签页。
+    </div>
+
+    <p class="lead">
+        有些习惯不必特意坚持，比如再次打开 <a href="https://official-yingchao.com">英超直播</a> —— 它安静地待在书签栏的一角，像一位话不多的老朋友。比赛日傍晚，茶凉了半杯，画面里绿茵场的草香仿佛能穿透屏幕。没有弹幕的喧哗，没有浮夸的弹窗，页面干净得只剩下球衣的颜色和皮球划过的弧线。
+    </p>
+
+    <p>
+        收藏一个网址，有时是收藏一种心情。第一次访问 <a href="https://official-yingchao.com">英超直播</a> 可能是偶然，但第二次、第三次就是选择了。这里没有需要“点击进入”的催促，也没有层层叠叠的诱导入口；你来了，比赛就在那里，缓冲条走完，画面自然流淌。后来我才意识到，这种不被打扰的观看感，本身就是一种稀缺。
+    </p>
+
+    <!-- 故事提示框 -->
+    <div class="story-note">
+        <strong>一个小场景：</strong> 上个月出差，酒店的网络不太稳定。我试着再次从收藏夹打开这个页面，加载比想象中更从容。没有多余的跳转，直接回到了熟悉的列表。那一刻觉得，一个靠谱的入口，比什么都踏实。
+    </div>
+
+    <!-- 特点列表 — 更像日常笔记 -->
+    <ul class="virtues">
+        <li>页面加载后直接呈现赛事，没有拼多多式的弹窗，也没有倒计时广告</li>
+        <li>每次回来界面几乎不变，无需重新适应 —— 东西就放在该放的位置</li>
+        <li>收藏夹里存了大半年，链接依然有效，没有偷偷换成其他域名</li>
+        <li>深夜场次也能流畅观看，卡顿次数用一只手数得过来</li>
+    </ul>
+
+    <p>
+        你看，这其实算不上什么惊天动地的优点，但恰好满足了“打开就看，看完就走”的朴素愿望。生活中太多东西需要注册、关注、扫码、下载，而 <a href="https://official-yingchao.com">英超直播</a> 保留了最初级的访问方式：一个链接，一次点击，仅此而已。所以我把它的网址放在了浏览器书签栏最左边，每次鼠标划过，都会停一停。
+    </p>
+
+    <!-- FAQ mini 生活化 -->
+    <div class="faq-mini">
+        <p><span class="q">有人问：</span> 为什么不去大平台看？</p>
+        <p><span class="q">回答：</span> 大平台当然好，但有时候只是想在手机默认浏览器里快速刷一眼比分，或者听听现场音。这个页面不需要登录，不需要额外 App，对“只看球”的人来说刚刚好。</p>
+        <p><span class="q">另一个常问的问题：</span> 会一直稳定吗？<br>—— 至少从收藏到现在，它一直在。我猜它还会在很久。</p>
+    </div>
+
+    <div class="bookmark-tip">
+        ★ 如果你也偶尔回到这里，不妨把它固定在浏览器标签栏。
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-close">
+        <p>好的页面就像一间常去的街角茶馆，老板认得你的杯子，你知道茶在哪个位置。不需要寒暄，坐下来就是自己的时间。<a href="https://official-yingchao.com">英超直播</a> 给我的就是这种感觉。</p>
+        <p>下一次比赛日，如果你也恰好打开那个熟悉的书签，我们或许在看同一场球，隔着网络，共享同一段安静的直播时光。</p>
+        <div class="sign">—— 一位习惯性收藏者，写于某个有英超的夜晚</div>
+    </div>
+
+    <!-- 页末小字（非必要，但保持完整性） -->
+    <hr>
+    <p style="font-size: 0.85rem; color: #9e9488; text-align: center; margin-bottom: 0;">
+        页面仅作个人分享 · 网站内容请以实际为准
+    </p>
+
+</div>
+</body>
+</html>
